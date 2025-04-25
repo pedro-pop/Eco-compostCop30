@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>eco-compost.com.br</title>
+  <meta charset="utf-8">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Times New Roman', Times, serif, sans-serif;
+    }
+    body {
+      background: #0f690c;
+      color: #5a2826;
+    }
+    header {
+      background: #5a2826;
+      color: rgb(255, 255, 255);
+      padding: 20px;
+      text-align: center;
+      border-radius: 0px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    button {
+      padding: 10px 20px;
+      background: #32ac27a8;
+      color: rgb(255, 255, 255);
+      border: #5a2826;;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #5a2826;
+    }
+    .section {
+      display: none;
+      padding: 20px;
+    }
+    .active {
+      display: block;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.806);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 20px #5a2826;;
+      margin-bottom: 20px;
+    }
+    table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .low {
+            background-color: #ffcccc; /* Cor para pontuação 0-3 */
+        }
+        .medium {
+            background-color: #fff2cc; /* Cor para pontuação 4-7 */
+        }
+        .high {
+            background-color: #d9ffcc; /* Cor para pontuação 8-10 */
+        }
+
+    
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Projeto Eco-Compost</h1>
+    <p>Desenvolvido pela turma de Análise e Desenvolvimento de Sistemas para a COP 30</p>
+  </header>
+
+  <nav>
+    <button onclick="showSection('inicio')">Início</button>
+    <button onclick="showSection('explicacao')">Explicação</button>
+     <button onclick="showSection('simulador')">Simulador</button>
+    <button onclick="showSection('quiz')">Quiz</button>
+  </nav>
+<!--Inicio-->
+  <section id="inicio" class="section active">
+    <div class="card">
+      <h2>Bem-vindo ao Eco-Compost!</h2>
+      <p>
+        Este site foi desenvolvido com o objetivo de conscientizar sobre a compostagem e sua importância para o meio ambiente.
+        Aqui você poderá simular a compostagem, aprender o que pode ou não ser compostado e testar seus conhecimentos em um quiz interativo!
+      </p>
+      <p>
+        A compostagem é um processo natural de reciclagem de resíduos orgânicos, transformando restos de alimentos e resíduos verdes em adubo natural.
+        Esse processo reduz a quantidade de lixo nos aterros e melhora a saúde do solo.
+      </p>
+    </div>
+    <div class="card">
+      <h2>Sobre o Projeto:</h2>
+      <p>
+        Este projeto foi idealizado pelos alunos do curso técnico de Análise e Desenvolvimento de Sistemas como parte da participação na COP 30.
+        Nosso objetivo é criar soluções sustentáveis com o uso da tecnologia.
+      </p>
+    </div>
+    <div class="card">
+        <h2>Oque é a COP 30?</h2>
+        <p>A COP30 é a 30° Conferência das Nações Unidas sobre Mudança do Clima (Conferência das Partes), um encontro global anual onde líderes mundiais, cientistas, organizações não governamentais e representantes da sociedade civil discutem ações para combater as mudanças do clima.</p>
+    </div>
+  </section>
+<!--Explicação-->
+  <section id="explicacao" class="section">
+    <div class="card">
+        <h2>Como a compostagem ajuda benefencia o clima?</h2>
+        <p>A compostagem é uma prática importante para reduzir a emissão de gases nocivos, como o CO2 e o metano, e ajudar a combater as mudanças climáticas. Além disso, ela melhora a saúde do solo e reduz a necessidade de fertilizantes químicos. É uma ação simples, mas que pode fazer uma grande diferença para o meio ambiente!</p>
+    </div>
+
+    <div class="card">
+        <h2>O que é compostagem?</h2>
+        <p>É um processo natural de transformação de matéria orgânica em adubo(fertilizante natural), através da decomposição de resíduos orgânicos como restos de comida, folhas e outros materiais vegetais.</p>
+      </div>
+
+    <div class="card">
+      <h2>Como fazer uma composteira?</h2>
+      <p>
+        <h3>Veja como faze-la rapido e facil em 8 passos:</h3>
+            <b>Etapa 1: Escolhendo o tipo e tamanho da composteira:</b><br>
+
+            - Com minhocas (vermicompostagem): rápida e eficiente. <br>
+            
+            - Sem minhocas: mais lenta, porém simples.<br>
+            
+            - Tamanho: baldes de 15-20L empilháveis para espaços pequenos; caixas maiores para quintais.<br>
+
+            <b>Etapa 2: Materiais necessários você vai precisar de:</b><br>
+
+            - 3 baldes ou caixas com tampa (se possível, empilháveis)<br>
+
+            - Torneirinha plástica (opcional, mas útil para o líquido do composto)<br>
+
+            - Broca para furar (ou faca quente/cortador)<br>
+
+            - Tela fina ou tecido velho (para cobrir os furos)<br>
+
+            - Restos orgânicos (frutas, legumes, borra de café, etc.)<br>
+
+            - Materiais secos (folhas secas, papelão picado, serragem sem tratamento)<br>
+
+            <b>Etapa 3: Preparando os recipientes</b><br>
+
+            - Baldes 1 e 2 (superiores): Faça furos no fundo para drenagem e passagem das minhocas.<br>
+
+            - Balde 3 (inferior): Não fure — ele será o coletor do chorume (líquido da decomposição).  <br>
+
+            - Coloque uma tela nos fundos dos baldes superiores para impedir a queda de resíduos.<br>
+
+            <b>Etapa 4: Montando a composteira</b><br>
+
+            - Empilhe os baldes:  <br>
+            - Balde 3 (sem furos) embaixo  <br>
+            - Balde 2 acima (com furos)  <br>
+            - Balde 1 no topo (com furos e tampa)  <br>
+            - Comece a usar o balde superior para depositar resíduos.<br>
+
+            <b>Etapa 5: Equilibrando os ingredientes</b><br>
+
+            Para evitar mau cheiro e manter a compostagem saudável:<br>
+            
+            - Misture sempre matéria úmida (restos de comida) com matéria seca (folhas secas, papelão, serragem). <br> 
+
+            - A proporção ideal: 1 parte úmida para 2 partes secas.<br>
+
+            <b>Etapa 6: Se for usar minhocas</b><br>
+
+            - Use minhocas californianas (Eisenia fétida, facilmente encontradas a venda na internet).  <br>
+
+            - Coloque-as no segundo balde (com restos parcialmente decompostos).  <br>
+
+            - Elas subirão para o balde superior conforme houver alimento disponível.  <br>
+
+            - Evite calor extremo e mantenha a composteira na sombra.<br>
+
+            <b>Etapa 7: Mantendo e monitorando</b><br>
+
+            - Revolva o material 1 vez por semana.  <br>
+
+            - Observe a umidade: se estiver muito seco, borrife água; se estiver molhado demais, adicione mais seco.  <br>
+
+            - Se sair líquido, abra a torneirinha ou retire o chorume do balde inferior (diluído em 10 partes de água, ele vira fertilizante líquido).<br>
+
+            <b>Etapa 8: Colhendo o adubo  </b><br>
+
+            - Em 2 a 3 meses, você terá húmus pronto:  <br>
+
+            - Cor escura, cheiro de terra molhada, textura soltinha.  <br>
+
+            - Transfira os resíduos ainda frescos para outro balde e use o húmus nas plantas.<br>
+      </p>
+    </div>
+
+    <div class="card">
+        <h2>Oque pode ser utilizado na compostagem?</h2>
+        <p><b>Restos de comida:</b><br>
+            Frutas, verduras, legumes, alimentos cozidos, massas, pães, derivados do leite, alimentos industrializados.<br>
+            <b>Resíduos vegetais:</b><br>
+            Folhas, flores murchas, aparas de grama, ramos, galhos picados, serragem1, palha, feno.<br>
+            <b>Outros:</b><br>
+            Borra de café, cascas de ovos, saquinhos de chá, cinzas de lareira, terra de vasos.
+        </p>
+    </div>
+  </section>
+<!--Simulação-->
+  <section id="simulador" class="section">
+    <div class="card">
+      <h2>Simulador de Compostagem:</h2><br>
+      <p>Aqui voce pode calcular quanto kg de compostagem você utilizou para a redução de CO2 e lembre, quando o assunto é meio ambiente, o pouco que você faz ja é muito para ajuda-lo.</p><br>
+      <p><b>OBS: Recomendo verificar a aba de explicaçao para compreender o intuito da simulação.</b></p><br>
+
+      <label for="peso">Digite o valor em quilogramas:</label><br>
+      <input type="number" id="peso" placeholder="Ex: 20">
+      <button onclick="dividir()"><b>Calcular</b></button>
+    
+      <p id="resultado"></p>
+    
+      <script>
+        function dividir() {
+          let peso = document.getElementById("peso").value;
+          let resultado = peso / 4;
+          document.getElementById("resultado").textContent = "Resultado: " + resultado;
+        }
+      </script>
+      
+    </div>
+  </section>
+<!--Quiz-->
+  <section id="quiz" class="section">
+    <div class="card">
+        <!--Introdução-->
+      <h2>Quiz de Compostagem:</h2>
+      <p>Responda as perguntas a seguir para ver o quanto você aprendeu com o nosso site.</p>
+    </div>
+
+    <!--Pergunta 1-->
+    <div class="card">
+        <h3>Pergunta 1:O que é a COP30?</h3>
+        <form>
+            <input type="radio" value="ap1" id="p1a" name="pergunta1">
+            <label for="p1a">A-Uma conferência sobre biodiversidade</label><br>
+            <input type="radio" value="bp2" id="p1b" name="pergunta1">
+            <label for="p2b">B-Uma conferência global sobre mudanças climáticas da ONU</label><br>
+            <input type="radio" value="cp3" id="p1c" name="pergunta1">
+            <label for="p3c">C-Um evento sobre energia renovável</label><br>
+            <input type="radio" value="dp4" id="p1d" name="pergunta1">
+            <label for="p4d">D-Uma reunião sobre conservação de água</label><br>
+        </form>
+    </div>
+
+    <!--Pergunta 2-->
+    <div class="card">
+        <h3>Pergunta 2:Como a compostagem benefencia o clima?</h3>
+        <form>
+            <input type="radio" value="ap2" id="p2a" name="pergunta2">
+            <label for="p2a">A-Reduzindo o uso de fertilizantes químicos</label><br>
+            <input type="radio" value="bp2" id="p2b" name="pergunta2">
+            <label for="p2b">B-Aumentando a produção de energia renovável</label><br>
+            <input type="radio" value="cp2" id="p2c" name="pergunta2">
+            <label for="p2c">C-Reduzindo a emissão de CO2 e metano nos aterros sanitários</label><br>
+            <input type="radio" value="dp2" id="p2d" name="pergunta2">
+            <label for="p2d">D-Diminuindo a necessidade de irrigação</label><br>
+        </form>
+    </div>
+
+    <!--Pergunta 3-->
+    <div class="card">
+        <h3>Pergunta 3:Qual dos itens abaixo pode ser colocado em uma composteira?</h3>
+    </form>
+        <input type="radio" value="ap3" id="p3a" name="pergunta3">
+        <label for="p3a">A-Restos de carne</label><br>
+        <input type="radio" value="bp3" id="p3b" name="pergunta3">
+        <label for="p3b">B-Garrafa plastica</label><br>
+        <input type="radio" value="cp3" id="p3c" name="pergunta3">
+        <label for="p3c">C-Casca de banana</label><br>
+        <input type="radio" value="dp3" id="p3d" name="pergunta3">
+        <label for="p3d">D-Vidro</label><br>
+    </form>
+    </div>
+
+    <!--Pergunta 4-->
+    <div class="card">
+        <h3>Pergunta 4:O que NÃO deve ser colocado em uma composteira caseira?</h3>
+        </form>
+            <input type="radio" value="ap4" id="p4a" name="pergunta4">
+            <label for="p4a">A-Folhas secas</label><br>
+            <input type="radio" value="bp4" id="p4b" name="pergunta4">
+            <label for="p4b">B-Carnes</label><br>
+            <input type="radio" value="cp4" id="p4c" name="pergunta4">
+            <label for="p4c">C-Frutas</label><br>
+            <input type="radio" value="dp4" id="p4d" name="pergunta4">
+            <label for="p4d">D-Casca de ovo</label><br>
+        </form>
+    </div>
+
+    <!--Pergunta 5-->
+    <div class="card">
+        <h3>Pergunta 5:Qual é o papel das minhocas na composteira?</h3>
+        </form>
+            <input type="radio" value="ap5" id="p5a" name="pergunta5">
+            <label for="p5a">A-Aumentar a umidade</label><br>
+            <input type="radio" value="bp5" id="p5b" name="pergunta5">
+            <label for="p5b">B- Decompor o lixo orgânico</label><br>
+            <input type="radio" value="cp5" id="p5c" name="pergunta5">
+            <label for="p5c">C-Neutralizar odores</label><br>
+            <input type="radio" value="dp5" id="p5d" name="pergunta5">
+            <label for="p5d">D-Impregnar o solo com bactérias</label><br>
+        </form>
+    </div>
+
+    <!--Pergunta 6-->
+    <div class="card">
+        <h3>Pergunta 6: Oque é a compostagem?</h3>
+        </form>
+            <input type="radio" value="ap6" id="p6a" name="pergunta6">
+            <label for="p6a">A-Processo de reciclagem de metais</label><br>
+            <input type="radio" value="bp6" id="p6b" name="pergunta6">
+            <label for="p6b">B-Transformação de resíduos orgânicos em adubo</label><br>
+            <input type="radio" value="cp6" id="p6c" name="pergunta6">
+            <label for="p6c">C-Filtragem de água</label><br>
+            <input type="radio" value="dp6" id="p6d" name="pergunta6">
+            <label for="p6d">D-Reaproveitamento de plásticos</label><br>
+        </form>
+    </div>
+
+    <!--Pergunta 7-->
+    <div class="card">
+        <h3>Pergunta 7:Por que é importante ter matéria seca na composteira?</h3>
+        </form>
+            <input type="radio" value="ap7" id="p7a" name="pergunta7">
+            <label for="p7a">A-Para alimentar as minhocas</label><br>
+            <input type="radio" value="bp7" id="p7b" name="pergunta7">
+            <label for="p7b">B-Para evitar excesso de umidade e mau cheiro</label><br>
+            <input type="radio" value="cp7" id="p7c" name="pergunta7">
+            <label for="p7c">C-Para acelerar o apodrecimento</label><br>
+            <input type="radio" value="dp7" id="p7d" name="pergunta7">
+            <label for="p7d">D-Para atrair insetos</label><br>
+        </form>
+    </div>
+
+    <!--Pergunta 8-->
+    <div class="card">
+        <h3>Pergunta 8:Quanto tempo, em média, leva a compostagem para gerar adubo?</h3>
+        </form>
+            <input type="radio" value="ap8" id="p8a" name="pergunta8">
+            <label for="p8a">A-1 a 2 semanas</label><br>
+            <input type="radio" value="bp8" id="p8b" name="pergunta8">
+            <label for="p8b">B-5 a 8 meses</label><br>
+            <input type="radio" value="cp8" id="p8c" name="pergunta8">
+            <label for="p8c">C-2 a 4 meses</label><br>
+            <input type="radio" value="dp8" id="p8d" name="pergunta8">
+            <label for="p8d">D-1 ano</label><br>
+        </form>
+    </div>
+
+    <!--Pergunta 9-->
+    <div class="card">
+        <h3>Pergunta 9: O que o composto final pode ser usado para fazer?</h3>
+        </form>
+            <input type="radio" value="ap9" id="p9a" name="pergunta9">
+            <label for="p9a">A-Sabão ecológico</label><br>
+            <input type="radio" value="bp9" id="p9b" name="pergunta9">
+            <label for="p9b">B-Combustível</label><br>
+            <input type="radio" value="cp2" id="p9c" name="pergunta9">
+            <label for="p9c">C-Inseticida natural</label><br>
+            <input type="radio" value="dp2" id="p9d" name="pergunta9">
+            <label for="p9d">D-Adubo para plantas</label><br>
+        </form>
+    </div>
+
+    <!--Pergunta 10-->
+    <div class="card">
+      <form>
+        <h3>Pergunta 10:Oque achou do Quiz?</h3>
+        <input type="radio" value="ap10" id="p10a" name="pergunta10">
+            <label for="p10a">A-Ruim</label><br>
+            <input type="radio" value="bp10" id="p10b" name="pergunta10">
+            <label for="p10b">B-Mais ou menos</label><br>
+            <input type="radio" value="cp10" id="p10c" name="pergunta10">
+            <label for="p10c">C-Ok</label><br>
+            <input type="radio" value="dp10" id="p10d" name="pergunta10">
+            <label for="p10d">D-Super criativo</label><br>
+       </form>
+    </div>
+    <!--Pontos-->
+    <div class="card">
+        <h2>Veja sua tabela de pontuação:</h2><br>
+        <table border="2">
+          <thead style="background-color: #f2f2f2;">
+              <th><b>Pontuação</b></th>
+              <th><b>Avaliação</b></th>
+          </thead>
+          <tr>
+              <td><b>0-3</b></td>
+              <td><b>Que pena! Acho que você não prestou muita atenção nas informações do site.</b> </td>
+          </tr>
+          <tr>
+              <td><b>4-7</b></td>
+              <td><b>Hmm! Voce prestou ate que bastante atenção, mas releia para absorver melhor as informações.</b> </td>
+          </tr>
+          <tr>
+              <td><b>8-10</b></td>
+              <td><b>Uau! Voce conseguiu aprender bastante com o site, PARABENS!!!</b></td>
+          </tr>
+      </table>
+    </div>
+    <!--Respostas-->
+    <div class="card">
+        <h2>Verifique suas respostas:</h2><br>
+        <details>
+            <ol>
+                <li>B-Uma conferência global sobre mudanças climáticas da ONU</li>
+                <li>C-Reduzindo a emissão de CO2 e metano nos aterros sanitários</li>
+                <li>C-Casca de banana</li>
+                <li>B-Carnes</li>
+                <li>B-Decompor o lixo orgânico</li>
+                <li>C-A transformação de resíduos orgânicos em adubo natural</li>
+                <li>B-Para evitar excesso de umidade e mau cheiro</li>
+                <li>C-2 a 4 meses</li>
+                <li>D-Adubo para plantas</li>
+                <li>Voce sabe a respota dessa</li>
+            </ol>
+        </details>
+    </div>
+  </section>
+<!--scripts-->
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
